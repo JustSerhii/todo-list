@@ -12,8 +12,8 @@ renderTodoList();
 function renderTodoList(){
   let todoListHTML = '';
 
-  for (let i = 0; i < todoList.length; i++){
-    const todoObject = todoList[i];
+
+  todoList.forEach(function(todoObject, i){
     const {name, dueDate} = todoObject;
     const html = `
       <div class="todo-name">${name}</div>
@@ -25,7 +25,7 @@ function renderTodoList(){
       " class="delete-todo-button">Delete</button>
       `;
     todoListHTML += html;
-  }
+  })
   
   document.querySelector('.js-todo-list')
     .innerHTML = todoListHTML;
