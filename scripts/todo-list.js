@@ -5,6 +5,7 @@ let todoList = [{
 const storedTodoList = localStorage.getItem('todoList');
 if (storedTodoList) {
   todoList = JSON.parse(storedTodoList);
+  
 }
 renderTodoList();
 
